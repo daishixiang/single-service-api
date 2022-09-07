@@ -1,0 +1,5 @@
+spring:
+  elasticsearch:
+    uris: ${SCKY_TEST_ES_URIS}
+    username: ${SCKY_TEST_ES_USERNAME}
+    password: ${SCKY_TEST_ES_PASSWORD}
