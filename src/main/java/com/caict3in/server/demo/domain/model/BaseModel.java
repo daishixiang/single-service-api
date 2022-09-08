@@ -1,7 +1,7 @@
 package com.caict3in.server.demo.domain.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -13,6 +13,9 @@ import java.time.LocalDateTime;
  */
 @Setter
 @Getter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BaseModel implements Serializable {
 
     private static final long serialVersionUID = 6593994024759360938L;

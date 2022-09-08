@@ -3,6 +3,8 @@ package com.caict3in.server.demo.mapper;
 import com.caict3in.server.demo.domain.model.UserInfo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * @author daisx
  * @date 2022/9/7
@@ -17,4 +19,9 @@ public interface UserInfoMapper {
      */
     UserInfo getUserInfoByUserName(@Param("userName") String userName);
 
+    /**
+     * 查询所有用户
+     * @return
+     */
+    List<UserInfo> findAll();
 }
