@@ -32,7 +32,6 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * @author daisx
- * @since 2021/03/08 16:21
  */
 @Configuration
 @EnableCaching

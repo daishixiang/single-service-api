@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.8</version>
+        <version>2.7.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.caict3in.server</groupId>
@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <mybatis.starter.version>2.2.1</mybatis.starter.version>
+        <mybatis.starter.version>2.2.2</mybatis.starter.version>
         <mybatis.pagehelper.starter.version>1.4.2</mybatis.pagehelper.starter.version>
         <hutool.version>5.8.5</hutool.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -40,19 +40,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
