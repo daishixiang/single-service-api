@@ -1,12 +1,12 @@
 package com.caict3in.server.demo.rest;
 
+import com.caict3in.server.demo.common.PageParam;
+import com.caict3in.server.demo.common.PageResponse;
 import com.caict3in.server.demo.service.UserInfoService;
 import com.caict3in.server.demo.service.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author daisx
@@ -26,4 +26,12 @@ public class UserResource {
 
         return UserDto.builder().build();
     }
+
+
+    @PostMapping("/findAll")
+    public PageResponse<UserDto> findAllUserInfo(@RequestBody PageParam page){
+        return userInfoService.findAllUserInfo(page);
+    }
+
+
 }

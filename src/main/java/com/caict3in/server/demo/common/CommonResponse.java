@@ -10,8 +10,7 @@ import java.io.Serializable;
  * @param <T>
  */
 public class CommonResponse<T> implements Serializable {
-
-    private static final long serialVersionUID = -1L;
+    private static final long serialVersionUID = 784254253744267038L;
 
     private String code;
 
@@ -19,17 +18,41 @@ public class CommonResponse<T> implements Serializable {
 
     private T data;
 
-    protected CommonResponse() {
+    public CommonResponse() {
     }
 
-    protected CommonResponse(String code, String message, T data) {
+    public CommonResponse(String code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
     }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
     public static <T> CommonResponse<T> success() {
-        return new CommonResponse<T>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), null);
+        return new CommonResponse<>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), null);
     }
 
     /**
@@ -38,7 +61,7 @@ public class CommonResponse<T> implements Serializable {
      * @param data 返回的数据
      */
     public static <T> CommonResponse<T> success(T data) {
-        return new CommonResponse<T>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), data);
+        return new CommonResponse<>(ErrorCode.SUCCESS.getCode(), ErrorCode.SUCCESS.getMessage(), data);
     }
 
     /**
@@ -48,7 +71,7 @@ public class CommonResponse<T> implements Serializable {
      * @param  message 提示信息
      */
     public static <T> CommonResponse<T> success(T data, String message) {
-        return new CommonResponse<T>(ErrorCode.SUCCESS.getCode(), message, data);
+        return new CommonResponse<>(ErrorCode.SUCCESS.getCode(), message, data);
     }
 
     /**
@@ -56,7 +79,7 @@ public class CommonResponse<T> implements Serializable {
      * @param errorCode 错误码
      */
     public static <T> CommonResponse<T> failed(ErrorCode errorCode) {
-        return new CommonResponse<T>(errorCode.getCode(), errorCode.getMessage(), null);
+        return new CommonResponse<>(errorCode.getCode(), errorCode.getMessage(), null);
     }
 
 
@@ -66,7 +89,7 @@ public class CommonResponse<T> implements Serializable {
      * @param data 返回的数据
      */
     public static <T> CommonResponse<T> failed(ErrorCode errorCode, T data) {
-        return new CommonResponse<T>(errorCode.getCode(), errorCode.getMessage(), data);
+        return new CommonResponse<>(errorCode.getCode(), errorCode.getMessage(), data);
     }
 
     /**
@@ -75,11 +98,11 @@ public class CommonResponse<T> implements Serializable {
      * @param message 错误信息
      */
     public static <T> CommonResponse<T> failed(ErrorCode errorCode, String message) {
-        return new CommonResponse<T>(errorCode.getCode(), message, null);
+        return new CommonResponse<>(errorCode.getCode(), message, null);
     }
 
     public static <T> CommonResponse<T> failed(String errorCode, String message) {
-        return new CommonResponse<T>(errorCode, message, null);
+        return new CommonResponse<>(errorCode, message, null);
     }
 
     /**
@@ -87,13 +110,13 @@ public class CommonResponse<T> implements Serializable {
      * @param <T> T
      */
     public static <T> CommonResponse<T> systemFailed() {
-        return new CommonResponse<T>(ErrorCode.B0001.getCode(), ErrorCode.B0001.getMessage(), null);
+        return new CommonResponse<>(ErrorCode.B0001.getCode(), ErrorCode.B0001.getMessage(), null);
     }
 
     /**
      * 参数验证失败返回结果
      */
     public static <T> CommonResponse<T> validateFailed() {
-        return new CommonResponse<T>(ErrorCode.A0400.getCode(), ErrorCode.A0400.getMessage(), null);
+        return new CommonResponse<>(ErrorCode.A0400.getCode(), ErrorCode.A0400.getMessage(), null);
     }
 }

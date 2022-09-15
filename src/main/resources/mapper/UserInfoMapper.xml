@@ -7,7 +7,7 @@
     </select>
 
     <select id="findAll" resultType="com.caict3in.server.demo.domain.model.UserInfo">
-        select * from user_info u where u.deleted=0;
+        select * from user_info u where u.deleted=0
     </select>
 
 </mapper>

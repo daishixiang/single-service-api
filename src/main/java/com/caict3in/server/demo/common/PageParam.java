@@ -10,13 +10,13 @@ import java.io.Serializable;
 /**
  * @author daisx
  * @date 2022/9/8
- * @description
+ * @description 分页参数
  */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Page implements Serializable {
+public class PageParam implements Serializable {
     
     private static final long serialVersionUID = 507594524526546241L;
 

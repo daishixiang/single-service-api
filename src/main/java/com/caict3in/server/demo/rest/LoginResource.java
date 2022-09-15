@@ -1,12 +1,11 @@
 package com.caict3in.server.demo.rest;
 
+import com.caict3in.server.demo.rest.vm.LoginUserVm;
 import com.caict3in.server.demo.service.UserInfoService;
 import com.caict3in.server.demo.service.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author daisx
@@ -21,8 +20,8 @@ public class LoginResource {
 
     private final UserInfoService userInfoService;
 
-    @GetMapping("/getInfo")
-    public UserDto getUserInfo(){
+    @PostMapping("/userName")
+    public UserDto getUserInfo(@RequestBody LoginUserVm loginUserVm){
 
         return UserDto.builder().build();
     }

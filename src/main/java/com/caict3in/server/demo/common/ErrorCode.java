@@ -11,7 +11,7 @@ public enum ErrorCode{
     /**
      * 成功
      */
-    SUCCESS("00000", "一切 ok"),
+    SUCCESS("00000", "成功"),
 
     /**
      * 用户端错误 级宏观错误码

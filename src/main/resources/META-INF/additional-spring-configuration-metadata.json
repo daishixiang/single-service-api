@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "application.env",
+      "type": "java.lang.String",
+      "description": "application runtime environment."
+    },
+    {
+      "name": "application.jwt.key",
+      "type": "java.lang.String",
+      "description": "The encryption and decryption key of the application's json web token."
+    },
+    {
+      "name": "application.jwt.refreshKey",
+      "type": "java.lang.String",
+      "description": "The refresh key of the application's json web token."
+    }
+  ] }
