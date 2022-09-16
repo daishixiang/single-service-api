@@ -1,4 +1,4 @@
-package com.caict3in.server.demo.rest;
+package com.caict3in.server.demo.web;
 
 import com.caict3in.server.demo.common.PageParam;
 import com.caict3in.server.demo.common.PageResponse;

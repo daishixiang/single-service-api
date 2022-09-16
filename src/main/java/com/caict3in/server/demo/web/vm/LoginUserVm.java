@@ -1,4 +1,4 @@
-package com.caict3in.server.demo.rest.vm;
+package com.caict3in.server.demo.web.vm;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

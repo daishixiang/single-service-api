@@ -1,6 +1,6 @@
-package com.caict3in.server.demo.rest;
+package com.caict3in.server.demo.web;
 
-import com.caict3in.server.demo.rest.vm.LoginUserVm;
+import com.caict3in.server.demo.web.vm.LoginUserVm;
 import com.caict3in.server.demo.service.UserInfoService;
 import com.caict3in.server.demo.service.dto.UserDto;
 import lombok.RequiredArgsConstructor;
