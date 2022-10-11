@@ -24,9 +24,9 @@ public class PageParam implements Serializable {
     /**
      * 当前页
      */
-    private int pageNum;
+    private int pageNum=1;
     /**
      * 每页大小
      */
-    private int pageSize;
+    private int pageSize=10;
 }

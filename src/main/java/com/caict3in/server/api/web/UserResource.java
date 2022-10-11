@@ -1,9 +1,9 @@
 package com.caict3in.server.api.web;
 
-import com.caict3in.server.api.common.PageParam;
 import com.caict3in.server.api.common.PageResponse;
 import com.caict3in.server.api.service.UserInfoService;
 import com.caict3in.server.api.service.dto.UserDto;
+import com.caict3in.server.api.web.vm.QueryUserVm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -39,13 +39,14 @@ public class UserResource {
     /**
      * 用户列表
      *
-     * @param page 分页参数|com.caict3in.server.demo.common.PageParam
+     * @param userVm 查询用户参数|com.caict3in.server.api.web.vm.QueryUserVm
      * @return
      * @apiNote 分页查询所有用户信息列表
      */
     @PostMapping("/findAll")
-    public PageResponse<UserDto> findAllUserInfo(@RequestBody PageParam page) {
-        return userInfoService.findAllUserInfo(page);
+    public PageResponse<UserDto> findAllUserInfo(@RequestBody QueryUserVm userVm) {
+
+        return userInfoService.findAllUserInfo(userVm.getPage());
     }
 
 
