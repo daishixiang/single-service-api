@@ -1,30 +1,27 @@
 server:
   port: 80
   servlet:
-    context-path: /demo
+    context-path: /api
 
 spring:
+  autoconfigure:
+    exclude:
   application:
     name: demo
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
+    type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    druid:
-      initial-size: 5
-      min-idle: 50
-      maxActive: 100
-      maxWait: 60000
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 300000
-      validationQuery: SELECT 1
-      testWhileIdle: true
-      testOnBorrow: false
-      testOnReturn: false
-      poolPreparedStatements: true
-      maxPoolPreparedStatementPerConnectionSize: 10
+    hikari:
+      auto-commit: false
+      pool-name: HikariPool-demo
+      maximum-pool-size: 30
+      minimum-idle: 10
+      idle-timeout: 500000
+      max-lifetime: 540000
+      connection-test-query: SELECT 1
   redis:
     host: ${REDIS_HOST}
     port: 6399

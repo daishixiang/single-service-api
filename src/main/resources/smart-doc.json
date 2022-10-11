@@ -1,0 +1,5 @@
+{
+  "serverUrl": "http://127.0.0.1",
+  "pathPrefix": "/api",
+  "outPath": "src/main/resources/static/doc"
+}
